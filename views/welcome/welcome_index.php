@@ -9,7 +9,7 @@
 </script>
 
 
-<p>This is the welcome controller's default view file. It is located at <code>/views/welcome/welcome_index.php</code>.</p>
+<p>This is the welcome controller's default view file. It is located at <code>/views/welcome/posts_index.php</code>.</p>
 
 <h2>Examples</h2>
 <p>Below are some examples how to use Halo</p>
