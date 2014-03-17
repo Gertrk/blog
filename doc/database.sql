@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Märts 17, 2014 kell 12:22 PL
+-- Loomise aeg: Märts 17, 2014 kell 01:54 PL
 -- Serveri versioon: 5.6.14
 -- PHP versioon: 5.5.6
 
@@ -23,22 +23,23 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
-  `post id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `post subject` varchar(255) NOT NULL,
   `post text` text NOT NULL,
   `post created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`post id`),
+  PRIMARY KEY (`post_id`),
   KEY `user id` (`user id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Andmete tõmmistamine tabelile `post`
 --
 
-INSERT INTO `post` (`post id`, `post subject`, `post text`, `post created`, `user id`) VALUES
+INSERT INTO `post` (`post_id`, `post subject`, `post text`, `post created`, `user id`) VALUES
 (0, 'jaskb', 'asjfhbasjf', '2014-01-26 17:29:36', 1),
-(1, 'ytjuty', 'awerawer', '2014-01-26 17:29:59', 1);
+(1, 'ytjuty', 'awerawer', '2014-01-26 17:29:59', 1),
+(24, '65454', 'afaskjdnaslkjd', '2014-03-17 11:38:14', 1);
 
 -- --------------------------------------------------------
 
