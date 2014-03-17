@@ -6,8 +6,8 @@
     <div>
 
     <div>
-        <span class="badge badge-success">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
+        <span class="badge badge-success">Posted <?=$post["post created"]?></span>
     </div>
-   <?endforeach?>
-<?foreach ($tags[$post['post_id']]as $tag):?>
-    <a href="#"><span class="label" style="background-color:#5bc0de"><?=$tag?></span></a> <? endforeach?>
+    <?foreach ($tags   [$post	['post_id']] as $tag):?>
+        <a href="<?=BASE_URL?>tags/view/<?=$tag?>"><span class = "label" style="background-color: #5bc0de"><?=$tag?></span></a><?endforeach?>
+    <?endforeach?>
