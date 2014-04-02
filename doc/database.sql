@@ -1,75 +1,74 @@
--- phpMyAdmin SQL Dump
--- version 4.0.9
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Loomise aeg: Märts 17, 2014 kell 01:54 PL
--- Serveri versioon: 5.6.14
--- PHP versioon: 5.5.6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="<?=ASSETS_URL?>ico/favicon.png">
 
-SET FOREIGN_KEY_CHECKS=0;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+    <title><?=PROJECT_NAME?></title>
 
---
--- Andmebaas: `blog`
---
+    <!-- Bootstrap core CSS -->
+    <link href="<?=ASSETS_URL?>components/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
--- --------------------------------------------------------
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            min-height: 2000px !important;
+            padding-top: 70px;
+            background: url(<?= ASSETS_URL ?>img/bg.jpg);
+        }
+    </style>
 
---
--- Tabeli struktuur tabelile `post`
---
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-DROP TABLE IF EXISTS `post`;
-CREATE TABLE IF NOT EXISTS `post` (
-  `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `post subject` varchar(255) NOT NULL,
-  `post text` text NOT NULL,
-  `post created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `user id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`post_id`),
-  KEY `user id` (`user id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+</head>
 
---
--- Andmete tõmmistamine tabelile `post`
---
+<body>
 
-INSERT INTO `post` (`post_id`, `post subject`, `post text`, `post created`, `user id`) VALUES
-(0, 'jaskb', 'asjfhbasjf', '2014-01-26 17:29:36', 1),
-(1, 'ytjuty', 'awerawer', '2014-01-26 17:29:59', 1),
-(24, '65454', 'afaskjdnaslkjd', '2014-03-17 11:38:14', 1);
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><?=PROJECT_NAME?></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li <?= $controller == 'posts' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>">Posts</a></li>
+                <li <?= $controller == 'tags' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>tags">Tags</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+					</ul>
+				</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</div>
 
--- --------------------------------------------------------
+<div class="container">
 
---
--- Tabeli struktuur tabelile `user`
---
+    <!-- Main component for a primary marketing message or call to action -->
+    <?  require 'views/'. $controller . '/' .  $controller . '_' . $action . '.php'; ?>
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `deleted` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+</div> <!-- /container -->
 
---
--- Andmete tõmmistamine tabelile `user`
---
 
-INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
-(1, 'demo', 'demo', 0);
-
---
--- Tõmmistatud tabelite piirangud
---
-
---
--- Piirangud tabelile `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user id`) REFERENCES `user` (`user_id`);
-SET FOREIGN_KEY_CHECKS=1;
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="<?=ASSETS_URL?>components/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+<script src="<?=ASSETS_URL?>components/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
