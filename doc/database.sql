@@ -1,74 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="<?=ASSETS_URL?>ico/favicon.png">
+-- phpMyAdmin SQL Dump
+-- version 4.0.9
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Loomise aeg: Aprill 02, 2014 kell 05:21 PL
+-- Serveri versioon: 5.6.14
+-- PHP versioon: 5.5.6
 
-    <title><?=PROJECT_NAME?></title>
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?=ASSETS_URL?>components/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+--
+-- Andmebaas: `blog`
+--
 
-    <!-- Custom styles for this template -->
-    <style>
-        body {
-            min-height: 2000px !important;
-            padding-top: 70px;
-            background: url(<?= ASSETS_URL ?>img/bg.jpg);
-        }
-    </style>
+-- --------------------------------------------------------
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+--
+-- Tabeli struktuur tabelile `post`
+--
 
-</head>
+DROP TABLE IF EXISTS `post`;
+CREATE TABLE IF NOT EXISTS `post` (
+  `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post subject` varchar(255) NOT NULL,
+  `post_text` text NOT NULL,
+  `post created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`post_id`),
+  KEY `user id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
-<body>
+--
+-- Andmete tõmmistamine tabelile `post`
+--
 
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><?=PROJECT_NAME?></a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li <?= $controller == 'posts' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>">Posts</a></li>
-                <li <?= $controller == 'tags' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>tags">Tags</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
-					</ul>
-				</li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-        </div>
-    </div>
-</div>
+INSERT INTO `post` (`post_id`, `post subject`, `post_text`, `post created`, `user_id`) VALUES
+(0, 'Eesti võib saada transpordiministri', 'Võimu- ja rahaküsimustega lõpusirgele jõudnud uue valitsusliidu läbirääkijad annavad täna õhtul teada ka ministriportfellide jaotamisest, Postimehe andmetel võib juurde tulla transpordiministri koht.\r\n\r\nSel juhul lüüakse majandus- ja kommunikatsiooniministeerium kaheks: majandusministeerium ja transpordi- ja kommunikatsiooni oma.\r\n\r\nHetkel istuvad tulevased võimupartnerid koos ja sätivad lõplikult kokku tulusid-kulusid. Seejärel jõutakse ministrikohtadeni.', '2014-01-26 17:29:36', 1),
+(1, 'Uus võimuliit langetab tulumaksumäära ühe protsendi võrra', 'Sotsiaaldemokraatlik Erakond (SDE) ja Reformierakond jõudsid täna läbirääkimistel kokkuleppele, et tulumaks väheneb tulevast aastast ühe protsendi võrra 20 protsendile.\r\n\r\nSamuti jõudsid SDE ja Reformierakond kokkuleppele, et tulumaksuvaba määr tõuseb 144 eurolt 154 eurole ja töötuskindlustuse määr väheneb 0,6 protsendi võrra, teatas Reformierakonna pressiesindaja.\r\n\r\nSamuti leppisid pooled kokku, et  keskmine pension saab olema tulumaksuvaba, teatas sotside pressiesindaja.\r\n\r\n«Aastaid samal tasemel püsinud tulumaksuvaba määra tõstmine on hea uudis eelkõige väiksema ja keskmise sissetulekuga inimeste jaoks, kes maksukoormuse vähendamist oma rahakotis kõige rohkem tunnetavad,» ütles läbirääkimistel osalenud riigikogu SDE fraktsiooni liige Rannar Vassiljev.\r\n\r\nTema sõnul deklareerisid mõlemad osapooled, et eelarve tasakaalu põhimõte on koalitsioonipartnerite jaoks jätkuvalt oluline ning eelarve saab olema struktuurselt tasakaalus.\r\n\r\nReformierakondlasest peaministrikandidaadi Taavi Rõivase sõnul jääb tööjõumaksude langetamisega töötajatele ja ettevõtjatele järgmisel aastal rohkem kätte üle 100 miljonit euro.\r\n\r\nRahandusminister Jürgen Ligi sõnul näeb võimuliit maksulangetuste katteallikatena ette efektiivsemat ja paindlikumat finantsjuhtimist, alkoholi- ja tubakaaktsiisi kiiremat tõusu ning erimärgistatud kütuse maksuerandite, välja arvatud põllumajanduses ja väikelaevadel kasutava kütuse, asendamist täpsemalt suunatavate toetustega.\r\n\r\n«Katteallikatena näeme samuti Eesti Loto reklaamiõiguste laiendamisest tuleneva lisatulu ning maksupettuste vähendamise meetmetega ja salaturu vastase võitlusega,» sõnas Ligi.', '2014-01-26 17:29:59', 1);
 
-<div class="container">
+-- --------------------------------------------------------
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <?  require 'views/'. $controller . '/' .  $controller . '_' . $action . '.php'; ?>
+--
+-- Tabeli struktuur tabelile `post_tags`
+--
 
-</div> <!-- /container -->
+DROP TABLE IF EXISTS `post_tags`;
+CREATE TABLE IF NOT EXISTS `post_tags` (
+  `post_id` int(11) unsigned NOT NULL,
+  `tag_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`post_id`,`tag_id`),
+  KEY `tag_id` (`tag_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="<?=ASSETS_URL?>components/jquery/1.10.2/jquery-1.10.2.min.js"></script>
-<script src="<?=ASSETS_URL?>components/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-</body>
-</html>
+--
+-- Tabeli struktuur tabelile `tag`
+--
+
+DROP TABLE IF EXISTS `tag`;
+CREATE TABLE IF NOT EXISTS `tag` (
+  `tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tag_name` varchar(25) NOT NULL,
+  PRIMARY KEY (`tag_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabeli struktuur tabelile `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `deleted` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Andmete tõmmistamine tabelile `user`
+--
+
+INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
+(1, 'demo', 'demo', 0);
+
+--
+-- Tõmmistatud tabelite piirangud
+--
+
+--
+-- Piirangud tabelile `post`
+--
+ALTER TABLE `post`
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Piirangud tabelile `post_tags`
+--
+ALTER TABLE `post_tags`
+  ADD CONSTRAINT `post_tags_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`),
+  ADD CONSTRAINT `post_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`tag_id`);
+SET FOREIGN_KEY_CHECKS=1;
