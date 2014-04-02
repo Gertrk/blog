@@ -46,8 +46,6 @@
             <ul class="nav navbar-nav">
                 <li <?= $controller == 'posts' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>">Posts</a></li>
                 <li <?= $controller == 'tags' ? 'class="active"' : '' ?>><a href="<?=BASE_URL?>tags">Tags</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#contact">Contact</a></li>
 					</ul>
 				</li>
             </ul>

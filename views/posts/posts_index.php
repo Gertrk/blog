@@ -8,6 +8,8 @@
     <div>
         <span class="badge badge-success">Posted <?=$post["post created"]?></span>
     </div>
-    <?foreach (   [$post	['post_id']] as $tag):?>
-        <a href="<?=BASE_URL?>tags/view/<?=$tag?>"><span class = "label" style="background-color: #5bc0de"><?=$tag?></span></a><?endforeach?>
+    <var_dump($tags)></var_dump>
+    <? if (!empty($tags)) foreach ($tags   [$post	['post_id']] as $tag):?>
+        <a href="<?=BASE_URL?>tags/view/<?=$tag?>"><span class = "label" style="background-color: #5bc0de"><?=$tag?></span></a>
     <?endforeach?>
+<?endforeach?>
