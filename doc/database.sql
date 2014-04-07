@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Aprill 07, 2014 kell 03:42 PL
+-- Loomise aeg: Aprill 07, 2014 kell 03:48 PL
 -- Serveri versioon: 5.6.14
 -- PHP versioon: 5.5.6
 
@@ -61,7 +61,9 @@ CREATE TABLE IF NOT EXISTS `post_tags` (
 
 INSERT INTO `post_tags` (`post_id`, `tag_id`) VALUES
 (0, 1),
-(1, 1);
+(1, 1),
+(1, 3),
+(3, 4);
 
 -- --------------------------------------------------------
 
@@ -74,15 +76,17 @@ CREATE TABLE IF NOT EXISTS `tag` (
   `tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tag_name` varchar(25) NOT NULL,
   PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Andmete tõmmistamine tabelile `tag`
 --
 
 INSERT INTO `tag` (`tag_id`, `tag_name`) VALUES
-(1, 'Test1'),
-(2, 'test2');
+(1, 'Huvitav'),
+(2, 'Test2'),
+(3, 'Midagi'),
+(4, 'TereTere');
 
 -- --------------------------------------------------------
 
