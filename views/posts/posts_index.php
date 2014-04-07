@@ -15,6 +15,7 @@
         <p><?=$post["post_text"]?></p>
         <div>
             <span class="badge badge-success">Posted <?=$post["post created"]?></span>
+            <span class="badge badge-success">By <?=$post["username"]?></span>
             <div class="pull-right">
                 <? if (!empty($tags[$post['post_id']])) foreach ($tags   [$post	['post_id']] as $tag):?>
                     <a href="<?=BASE_URL?>tags/view/<?=$tag['tag']?>"><span class = "label" style="background-color: #5bc0de"><?=$tag['tag']?></span></a>
