@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Aprill 07, 2014 kell 03:22 PL
+-- Loomise aeg: Aprill 07, 2014 kell 03:42 PL
 -- Serveri versioon: 5.6.14
 -- PHP versioon: 5.5.6
 
@@ -37,9 +37,9 @@ CREATE TABLE IF NOT EXISTS `post` (
 --
 
 INSERT INTO `post` (`post_id`, `post subject`, `post_text`, `post created`, `user_id`) VALUES
-(0, ''Eesti võib saada transpordiministri'', ''Võimu- ja rahaküsimustega lõpusirgele jõudnud uue valitsusliidu läbirääkijad annavad täna õhtul teada ka ministriportfellide jaotamisest, Postimehe andmetel võib juurde tulla transpordiministri koht.\r\n\r\nSel juhul lüüakse majandus- ja kommunikatsiooniministeerium kaheks: majandusministeerium ja transpordi- ja kommunikatsiooni oma.\r\n\r\nHetkel istuvad tulevased võimupartnerid koos ja sätivad lõplikult kokku tulusid-kulusid. Seejärel jõutakse ministrikohtadeni.'', ''2014-01-26 17:29:36'', 1),
-(1, ''Uus võimuliit langetab tulumaksumäära ühe protsendi võrra'', ''Sotsiaaldemokraatlik Erakond (SDE) ja Reformierakond jõudsid täna läbirääkimistel kokkuleppele, et tulumaks väheneb tulevast aastast ühe protsendi võrra 20 protsendile.\r\n\r\nSamuti jõudsid SDE ja Reformierakond kokkuleppele, et tulumaksuvaba määr tõuseb 144 eurolt 154 eurole ja töötuskindlustuse määr väheneb 0,6 protsendi võrra, teatas Reformierakonna pressiesindaja.\r\n\r\nSamuti leppisid pooled kokku, et  keskmine pension saab olema tulumaksuvaba, teatas sotside pressiesindaja.\r\n\r\n«Aastaid samal tasemel püsinud tulumaksuvaba määra tõstmine on hea uudis eelkõige väiksema ja keskmise sissetulekuga inimeste jaoks, kes maksukoormuse vähendamist oma rahakotis kõige rohkem tunnetavad,» ütles läbirääkimistel osalenud riigikogu SDE fraktsiooni liige Rannar Vassiljev.\r\n\r\nTema sõnul deklareerisid mõlemad osapooled, et eelarve tasakaalu põhimõte on koalitsioonipartnerite jaoks jätkuvalt oluline ning eelarve saab olema struktuurselt tasakaalus.\r\n\r\nReformierakondlasest peaministrikandidaadi Taavi Rõivase sõnul jääb tööjõumaksude langetamisega töötajatele ja ettevõtjatele järgmisel aastal rohkem kätte üle 100 miljonit euro.\r\n\r\nRahandusminister Jürgen Ligi sõnul näeb võimuliit maksulangetuste katteallikatena ette efektiivsemat ja paindlikumat finantsjuhtimist, alkoholi- ja tubakaaktsiisi kiiremat tõusu ning erimärgistatud kütuse maksuerandite, välja arvatud põllumajanduses ja väikelaevadel kasutava kütuse, asendamist täpsemalt suunatavate toetustega.\r\n\r\n«Katteallikatena näeme samuti Eesti Loto reklaamiõiguste laiendamisest tuleneva lisatulu ning maksupettuste vähendamise meetmetega ja salaturu vastase võitlusega,» sõnas Ligi.'', ''2014-01-26 17:29:59'', 1),
-(3, ''Test2'', ''testtesttest'', ''2014-04-07 09:39:44'', 1);
+(0, 'Eesti võib saada transpordiministri', 'Võimu- ja rahaküsimustega lõpusirgele jõudnud uue valitsusliidu läbirääkijad annavad täna õhtul teada ka ministriportfellide jaotamisest, Postimehe andmetel võib juurde tulla transpordiministri koht.\r\n\r\nSel juhul lüüakse majandus- ja kommunikatsiooniministeerium kaheks: majandusministeerium ja transpordi- ja kommunikatsiooni oma.\r\n\r\nHetkel istuvad tulevased võimupartnerid koos ja sätivad lõplikult kokku tulusid-kulusid. Seejärel jõutakse ministrikohtadeni.', '2014-01-26 17:29:36', 1),
+(1, 'Uus võimuliit langetab tulumaksumäära ühe protsendi võrra', 'Sotsiaaldemokraatlik Erakond (SDE) ja Reformierakond jõudsid täna läbirääkimistel kokkuleppele, et tulumaks väheneb tulevast aastast ühe protsendi võrra 20 protsendile.\r\n\r\nSamuti jõudsid SDE ja Reformierakond kokkuleppele, et tulumaksuvaba määr tõuseb 144 eurolt 154 eurole ja töötuskindlustuse määr väheneb 0,6 protsendi võrra, teatas Reformierakonna pressiesindaja.\r\n\r\nSamuti leppisid pooled kokku, et  keskmine pension saab olema tulumaksuvaba, teatas sotside pressiesindaja.\r\n\r\n«Aastaid samal tasemel püsinud tulumaksuvaba määra tõstmine on hea uudis eelkõige väiksema ja keskmise sissetulekuga inimeste jaoks, kes maksukoormuse vähendamist oma rahakotis kõige rohkem tunnetavad,» ütles läbirääkimistel osalenud riigikogu SDE fraktsiooni liige Rannar Vassiljev.\r\n\r\nTema sõnul deklareerisid mõlemad osapooled, et eelarve tasakaalu põhimõte on koalitsioonipartnerite jaoks jätkuvalt oluline ning eelarve saab olema struktuurselt tasakaalus.\r\n\r\nReformierakondlasest peaministrikandidaadi Taavi Rõivase sõnul jääb tööjõumaksude langetamisega töötajatele ja ettevõtjatele järgmisel aastal rohkem kätte üle 100 miljonit euro.\r\n\r\nRahandusminister Jürgen Ligi sõnul näeb võimuliit maksulangetuste katteallikatena ette efektiivsemat ja paindlikumat finantsjuhtimist, alkoholi- ja tubakaaktsiisi kiiremat tõusu ning erimärgistatud kütuse maksuerandite, välja arvatud põllumajanduses ja väikelaevadel kasutava kütuse, asendamist täpsemalt suunatavate toetustega.\r\n\r\n«Katteallikatena näeme samuti Eesti Loto reklaamiõiguste laiendamisest tuleneva lisatulu ning maksupettuste vähendamise meetmetega ja salaturu vastase võitlusega,» sõnas Ligi.', '2014-01-26 17:29:59', 1),
+(3, 'Test2', 'testtesttest', '2014-04-07 09:39:44', 1);
 
 -- --------------------------------------------------------
 
@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `post_tags` (
 --
 
 INSERT INTO `post_tags` (`post_id`, `tag_id`) VALUES
+(0, 1),
 (1, 1);
 
 -- --------------------------------------------------------
@@ -80,8 +81,8 @@ CREATE TABLE IF NOT EXISTS `tag` (
 --
 
 INSERT INTO `tag` (`tag_id`, `tag_name`) VALUES
-(1, ''Test1''),
-(2, ''test2'');
+(1, 'Test1'),
+(2, 'test2');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(25) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `deleted` tinyint(3) unsigned NOT NULL DEFAULT ''0'',
+  `deleted` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -103,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
-(1, ''demo'', ''demo'', 0);
+(1, 'demo', 'demo', 0);
 
 --
 -- Tõmmistatud tabelite piirangud
