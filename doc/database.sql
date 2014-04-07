@@ -83,8 +83,8 @@ CREATE TABLE IF NOT EXISTS `tag` (
 --
 
 INSERT INTO `tag` (`tag_id`, `tag_name`) VALUES
-(1, 'story 1'),
-(2, 'blogi 2'),
+(1, 'story'),
+(2, 'blogi'),
 (3, 'all');
 
 --
