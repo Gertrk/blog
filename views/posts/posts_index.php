@@ -14,8 +14,6 @@
         <p><?=$post["post_text"]?></p>
         <div>
         <span class="badge badge-success">Posted <?=$post["post created"]?></span>
-            <div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span
-                    class="label">blog</span> <span class="label">personal</span></div>
 
             </div>
     <? if (!empty($tags[$post['post_id']])) foreach ($tags   [$post	['post_id']] as $tag):?>
