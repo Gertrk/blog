@@ -1,4 +1,3 @@
-
 <div class="list-group">
     <?foreach ($tags as $tag):?>
         <a
