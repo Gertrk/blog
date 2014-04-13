@@ -3,7 +3,7 @@
         <li class="list-group-item">
             <span class="badge"><?= $tag['count'] ?></span>
             <a
-                href="<?= BASE_URL ?>tags/view/<?= $tag['tag_id'] ?>/<?= $tag['tag_name'] ?>">
+                href="<?= BASE_URL ?>tags/view/<?= $tag['tag_name'] ?>">
                 <?= $tag['tag_name'] ?>
             </a>
         </li>
