@@ -15,7 +15,7 @@
         <span class="badge badge-success">By <?=$post["username"]?></span>
         <div class="pull-right">
             <? foreach ($tags as $tag): ?>
-                <a href="<?= BASE_URL ?>tags/view/<?= $tag['tag_name'] ?>"><span class= "label"
+                <a href="<?= BASE_URL ?>tags/view/<?= $tag['tag_id'] ?>"><span class= "label"
                                                                            style="background-color:#5bc0de"><?= $tag['tag_name'] ?></span></a>
             <?endforeach?></div>
     </div>
